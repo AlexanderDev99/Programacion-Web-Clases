@@ -1,5 +1,5 @@
 
-import {useState} from "react";
+import React, {useState} from "react";
 import HolaMundo from "./HolaMundo.tsx";
 import HolaMundo2 from "./HolaMundo2.tsx";
 import Contador from "./Contador.tsx";

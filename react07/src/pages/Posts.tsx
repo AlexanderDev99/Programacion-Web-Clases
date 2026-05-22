@@ -65,6 +65,12 @@ function Posts() {
                   <TableCell>{item.id}</TableCell>
                   <TableCell>{item.title}</TableCell>
                   <TableCell>{item.body}</TableCell>
+                  <TableCell>
+                    <Button variant="outlined" color="primary" href={`/post/${item.id}`}>
+                      Ver Detalles
+                    </Button>
+                  </TableCell>
+                 
                 </TableRow>
               ))}
             </TableBody>

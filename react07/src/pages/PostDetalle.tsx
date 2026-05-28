@@ -261,7 +261,7 @@ function PostDetalle() {
                         href="/posts"
                         fullWidth
                     >
-                        Volver a la lista
+                        Volver al listado de posts
                     </Button>
 
                 </CardContent>
@@ -270,5 +270,4 @@ function PostDetalle() {
     )
 }
 
-// Exportar el componente PostDetalle como default para usarlo en otras partes de la aplicación
 export default PostDetalle;

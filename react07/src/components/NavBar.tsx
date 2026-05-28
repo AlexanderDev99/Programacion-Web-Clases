@@ -22,6 +22,7 @@ function NavBar() {
           <Button color="inherit" component={Link} to="/" startIcon={<HomeIcon/>}>Inicio</Button>
           <Button color="inherit"component={Link} to="/about" startIcon={<HelpIcon/>}>Acerca de</Button>
           <Button color="inherit" component={Link} to="/post">Post</Button>
+          <Button color="inherit" component={Link} to="/usuarios">Usuarios</Button>
         </Toolbar>
       </AppBar>
     </>

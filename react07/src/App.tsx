@@ -1,26 +1,15 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { ThemeProvider } from "@emotion/react";
 import PostDetalle from "./pages/PostDetalle";
 import Posts from "./pages/Posts";
-import { Button, Stack } from "@mui/material";
-
-function ButtonUsage() {
-  return <Button variant="contained">hola soy un botón</Button>;
-}
-
-function BasicButtons() {
-  return (
-    <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
-  );
-}
+import Users from "./pages/Users";
+import UserDetalle from "./pages/UserDetalle";
+import UserPosts from "./pages/UserPosts";
+import UserTodos from "./pages/UserTodos";
+import UserAlbums from "./pages/UserAlbums";
 
 function App() {
   return (
@@ -31,6 +20,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/post" element={<Posts/>} />
         <Route path="/post/:id" element={<PostDetalle/>}/>
+        <Route path="/usuarios" element={<Users/>} />
+        <Route path="/usuarios/:id" element={<UserDetalle/>} />
+        <Route path="/usuarios/:id/posts" element={<UserPosts/>} />
+        <Route path="/usuarios/:id/todos" element={<UserTodos/>} />
+        <Route path="/usuarios/:id/albums" element={<UserAlbums/>} />
       </Routes>
     </>
   );

@@ -14,7 +14,7 @@ function NavBar() {
         {/* Toolbar contiene los elementos de la barra de navegación */}
         <Toolbar>
           {/* Título principal de la aplicación */}
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6"  component="div" sx={{ flexGrow: 1 }}>
             Mi Aplicación
           </Typography>
 

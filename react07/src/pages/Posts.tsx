@@ -1,6 +1,6 @@
 import { Button, Container, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //interface para definir el tipo de dato que se espera recibir de la API
 interface post {
@@ -11,7 +11,7 @@ interface post {
 
 function Posts() {
   //estado para almacenar los posts obtenidos de la API
-  const [post, setPosts] = useState<post[]>([]);
+  const [posts, setPosts] = useState<post[]>([]);
   //estado para manejar el estado de carga de los posts
   const [loading, setLoading] = useState(false);
 
@@ -22,12 +22,18 @@ function Posts() {
     // 1. Corregido: El dominio es "typicode" (no typecode) y cambiamos "/users" por "/posts"
     axios.get("https://jsonplaceholder.typicode.com/posts")
       .then(response => {
+        console.log(response.data);
         setPosts(response.data);
       })
-      .catch(error => alert(error))
+      .catch(error => alert("Error al obtener los posts: " + error.message))
       // 2. Corregido: Es una función setLoading(false), no una asignación "="
       .finally(() => setLoading(false)); 
   };
+
+  // Hook para cargar los posts automáticamente cuando el componente se monta
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
 
@@ -57,16 +63,17 @@ function Posts() {
                 <TableCell><strong>ID</strong></TableCell>
                 <TableCell><strong>Título</strong></TableCell>
                 <TableCell><strong>Contenido</strong></TableCell>
+                <TableCell>Ver Detalle</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {post.map((item) => (
+              {posts.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.id}</TableCell>
                   <TableCell>{item.title}</TableCell>
                   <TableCell>{item.body}</TableCell>
                   <TableCell>
-                    <Button variant="outlined" color="primary" href={`/post/${item.id}`}>
+                    <Button variant="outlined" color="inherit" href={`/post/${item.id}`}>
                       Ver Detalles
                     </Button>
                   </TableCell>

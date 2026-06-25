@@ -6,7 +6,7 @@ import java.net.URI;
 
 public class Rest01Server {
 
-    static void main() throws Exception {
+    public static void main(String[] args) throws Exception {
 
         // configuracion del contenedor
         SeBootstrap.Configuration config  = SeBootstrap.Configuration.builder()

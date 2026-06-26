@@ -1,6 +1,6 @@
 package com.programacion.web;
 
-import com.programacion.web.rest.UserRest;
+import com.programacion.web.rest.*;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
@@ -11,8 +11,13 @@ public class MyApplication extends Application {
 
     @Override
     public Set<Class<?>> getClasses(){
-        return  Set.of(
-                UserRest.class
+        return Set.of(
+                UserRest.class,
+                PostRest.class,
+                CommentRest.class,
+                AlbumRest.class,
+                PhotoRest.class,
+                TodoRest.class
         );
     }
 

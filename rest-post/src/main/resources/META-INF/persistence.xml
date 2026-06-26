@@ -6,6 +6,11 @@
 
     <persistence-unit name="dbposts" transaction-type="RESOURCE_LOCAL">
         <class>com.programacion.web.db.User</class>
+        <class>com.programacion.web.db.Post</class>
+        <class>com.programacion.web.db.Comment</class>
+        <class>com.programacion.web.db.Album</class>
+        <class>com.programacion.web.db.Photo</class>
+        <class>com.programacion.web.db.Todo</class>
 
         <properties>
             <!-- Configuración de Hibernate -->

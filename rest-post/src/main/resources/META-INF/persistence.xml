@@ -20,9 +20,9 @@
 
             <!-- Configuración de JDBC -->
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://ep-old-night-at4wtlha-pooler.c-9.us-east-1.aws.neon.tech/neondb"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://ep-gentle-shape-att0mw4v-pooler.c-9.us-east-1.aws.neon.tech/neondb"/>
             <property name="jakarta.persistence.jdbc.user" value="neondb_owner"/>
-            <property name="jakarta.persistence.jdbc.password" value="npg_BYuxZ5UbHe8E"/>
+            <property name="jakarta.persistence.jdbc.password" value="npg_8n3ECUjJkeDg"/>
         </properties>
 
     </persistence-unit>

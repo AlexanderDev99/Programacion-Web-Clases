@@ -12,16 +12,15 @@ public class RestPostMain {
     public static void main(String[] args) throws Exception {
 
 
+        //CONTENEDOR CDI
        var cdiConatiner = SeContainerInitializer.newInstance().initialize();
+
 //        var repo = cdiConatiner.select(UserRepository.class).get();
-//
 //        var emf = Persistence.createEntityManagerFactory("dbposts");
-//
 //        var em = emf.createEntityManager();
-//
 //        System.out.println(em);
-//
 //        repo.findAll().forEach(System.out::println);
+
         // Configuramos el servidor JAX-RS
         SeBootstrap.Configuration config = SeBootstrap.Configuration.builder()
                 .host("localhost")

@@ -1,0 +1,29 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="dbAcademia" transaction-type="RESOURCE_LOCAL">
+        <class>com.programacion.web.entities.Estudiante</class>
+        <class>com.programacion.web.entities.Curso</class>
+        <class>com.programacion.web.entities.Matricula</class>
+
+        <properties>
+            <!-- Configuración de Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+
+            <!-- Configuración de JDBC -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dbWeb"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="AlexanderDev99"/>
+
+            <!-- Creacion de la base de datos -->
+            <!-- <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+        </properties>
+
+    </persistence-unit>
+</persistence>

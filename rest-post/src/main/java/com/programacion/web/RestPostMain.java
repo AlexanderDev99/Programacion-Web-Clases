@@ -1,9 +1,7 @@
 package com.programacion.web;
 
-import com.programacion.web.repositorios.UserRepository;
-import jakarta.enterprise.inject.se.SeContainer;
+
 import jakarta.enterprise.inject.se.SeContainerInitializer;
-import jakarta.persistence.Persistence;
 import jakarta.ws.rs.SeBootstrap;
 
 import java.net.URI;
